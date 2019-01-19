@@ -18,7 +18,7 @@ public class CEJV416Winter2019 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Ohhhhhh");
+        System.out.println("Ohhhhhh eh hei hei");
     }
     
 }
