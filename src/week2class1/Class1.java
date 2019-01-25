@@ -30,14 +30,7 @@ public class Class1 {
          
          
          Adder a1 = new Adder();
-         Adder a2 = new Adder();
-         
-         
-         
-         a1.num = 10;
-         a2.num = 20;
-         
-         a1.add();
+         System.out.println("Sum of two integers values: "+ a1.add(10, 12));
     }
 
 }

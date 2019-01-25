@@ -11,13 +11,9 @@ package week2class1;
  */
 public class Adder {
     
-    int num;
-    
-        public void add()
-{
-    a3=a1+a2;
-    System.out.println("The total value is " + (num) );
-}
-    
+    int add(int a, int b)
+    {
+        return(a+b);
+    }
     
 }
