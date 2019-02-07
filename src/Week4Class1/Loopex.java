@@ -54,7 +54,7 @@ for(int i=1;i<11;i++){
 
 ask for a size
 Scanner sc = new Scanner(System.in);
-if even{
+else if even{
 
 
 
