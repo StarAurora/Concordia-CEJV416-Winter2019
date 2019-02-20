@@ -52,19 +52,16 @@ for(int i=1;i<11;i++){
 }
 
 
-ask for a size
-Scanner sc = new Scanner(System.in);
-else if even{
-
-
-
-*
-**
-***
-****
-*****
-
-}
-if odd{
-2)diamond
-}
+//
+//
+//
+//*
+//**
+//***
+//****
+//*****
+//
+//}
+//if odd{
+//2)diamond
+//}
