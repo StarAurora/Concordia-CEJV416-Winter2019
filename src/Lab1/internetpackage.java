@@ -4,6 +4,7 @@ package Lab1;
 public class internetpackage {
 
 
+
     
     private double time = 0;
     private double packageHours = 0;
@@ -11,31 +12,35 @@ public class internetpackage {
     private double packageFee = 0;
     
 
-   internetpackage(){
-       
-   }
+   internetpackage(){}
     
     internetpackage( double tM, double pH, double aH, double pF){
             time = tM;
             packageHours = pH;
             additionalHoursFee = aH;
-            packageFee = pH;
+            packageFee = pF;
     }
     
 
     public double getFee(){
-        if(time-packageHours>0){
         double fee;
+//        if(packageFee==19.95){
+//            return packageFee;
+//        }
+        if(time-packageHours>0){
         fee = (time-packageHours) * additionalHoursFee + packageFee;
         return fee;
         }
+        
         else{
             return packageFee;
         }
         
     }
     
-    public static void display(){
-        System.out.println("Your monthly internet fee is:"+getFee());
+    public String display(){
+//        System.out.println("Your monthly internet fee is:"+ i1.getFee());
+        return "Your monthly internet fee is:"+ getFee();
+       
     }
 }
