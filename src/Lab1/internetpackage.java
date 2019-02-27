@@ -38,9 +38,5 @@ public class internetpackage {
         
     }
     
-    public String display(){
-//        System.out.println("Your monthly internet fee is:"+ i1.getFee());
-        return "Your monthly internet fee is:"+ getFee();
-       
-    }
+
 }

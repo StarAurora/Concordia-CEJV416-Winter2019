@@ -1,8 +1,15 @@
 
+
+//======================Lab 1==========================
+//=====================================================
+//=============By Zhou Jiang
+//=====================================================
+
 package Lab1;
 import java.util.Scanner;
+import java.text.NumberFormat;
 
-public class main {
+public class calculator {
     public static void main(String[] arg){
             double totalHours = 0;
             double packageHours = 0;
@@ -61,15 +68,18 @@ public class main {
         internetpackage i1= new internetpackage(time, packageHours, additionalHoursFee, packageFee);
         
         
-        System.out.println("Your monthly internet fee is:"+i1.getFee());
+//        System.out.println("Your monthly internet fee is:"+i1.getFee());
 
-        internetpackage.display();
+        display("Your monthly intenet fee is: $" , i1.getFee());
     
         
         
     }
-    
-    
+    private static void display(String text, double value)
+    {
+        NumberFormat nf = NumberFormat.getNumberInstance();
+        System.out.println(text + nf.format(value));
+    }
     
 }
 
