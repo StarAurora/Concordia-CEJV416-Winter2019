@@ -1,23 +1,26 @@
 
 package Lab2;
-
+import java.util.Scanner;
+import java.text.NumberFormat;
 /**
  *
  * @author staraurora
  */
-public class bankAccount {
+public  abstract class bankAccount {
     
     
     protected double startingBalance;
     protected double currentBalance;
     protected double totalDeposits;
-    protected double depositsNumber;
+    protected double depositsNumber=0;
     protected double totalWithdraw;
-    protected double withdrawNumber;
+    protected double withdrawNumber=0;
     protected double interestRate;
     protected double serviceCharge;
+    double newMoney;
 
     protected boolean active;
+    
 
 
     public bankAccount() {
@@ -104,22 +107,39 @@ public class bankAccount {
     }
 //====================================================================
     
-    
-    
-    
-    public double makeDeposit() {
-        return dateCreated;
-    }
-
-    public double makeWithdraw() {
-        return
-    }
-    
-    public double calculateInterest{
-    
+    protected double makeDeposit(){
+        System.out.println("Please enter the moeny you want to deposit.");
+        Scanner sc =new Scanner(System.in);
+        double newMoney = sc.nextDouble();
+        currentBalance = startingBalance + newMoney;
+        depositsNumber=depositsNumber+1;
+        return currentBalance;
 }
-    public double doMonthlyReport{
     
+    protected double makeWithdraw(){
+        System.out.println("Please enter the moeny you want to withdraw.");
+        Scanner sc =new Scanner(System.in);
+        double newMoney = sc.nextDouble();
+        currentBalance = startingBalance - newMoney;
+        depositsNumber=depositsNumber+1;
+        return currentBalance;
+    }
+    
+
+    protected double calculateInterest(){
+        double monthlyInterestRate = interestRate/12;
+        double monthlyInterest = startingBalance * monthlyInterestRate;
+        currentBalance = startingBalance + monthlyInterest;
+        return currentBalance;
+}
+    protected double doMonthlyReport(){
+    
+        currentBalance = startingBalance - serviceCharge;
+        calculateInterest();
+        depositsNumber=0;
+        withdrawNumber=0;
+        serviceCharge=0;
+        return currentBalance;
 }
     
     
