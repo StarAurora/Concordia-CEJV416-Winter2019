@@ -9,26 +9,25 @@ import java.text.NumberFormat;
 public  abstract class bankAccount {
     
     
-    protected double startingBalance;
-    protected double currentBalance;
-    protected double totalDeposits;
+    protected double startingBalance=0;
+    protected double currentBalance=0;
+    protected double totalDeposits=0;
     protected double depositsNumber=0;
-    protected double totalWithdraw;
+    protected double totalWithdraw=0;
     protected double withdrawNumber=0;
-    protected double interestRate;
-    protected double serviceCharge;
+    protected double interestRate=0;
+    protected double serviceCharge=0;
     double newMoney;
 
     protected boolean active;
     
 
 
-    public bankAccount() {
-    }
+    public bankAccount() {}
 
-    public bankAccount(double startingBalance, double currentBalance, double interestRate) {
+    public bankAccount(double startingBalance, double interestRate) {
         this.startingBalance = startingBalance;
-        this.currentBalance = currentBalance;
+//        this.currentBalance = currentBalance;
         this.interestRate = interestRate;
     }
 //==========================starting Balance===============================
@@ -107,22 +106,23 @@ public  abstract class bankAccount {
     }
 //====================================================================
     
-    protected double makeDeposit(){
+    protected void makeDeposit(){
         System.out.println("Please enter the moeny you want to deposit.");
         Scanner sc =new Scanner(System.in);
         double newMoney = sc.nextDouble();
         currentBalance = startingBalance + newMoney;
         depositsNumber=depositsNumber+1;
-        return currentBalance;
+        startingBalance = currentBalance;
+        
 }
     
-    protected double makeWithdraw(){
-        System.out.println("Please enter the moeny you want to withdraw.");
+    protected void makeWithdraw(){
+        System.out.println("Please enter the money you want to withdraw.");
         Scanner sc =new Scanner(System.in);
         double newMoney = sc.nextDouble();
         currentBalance = startingBalance - newMoney;
         depositsNumber=depositsNumber+1;
-        return currentBalance;
+        startingBalance = currentBalance;
     }
     
 
@@ -139,8 +139,17 @@ public  abstract class bankAccount {
         depositsNumber=0;
         withdrawNumber=0;
         serviceCharge=0;
+        startingBalance = currentBalance;
         return currentBalance;
 }
+    
+    
+    protected boolean checkActive(){
+        if(currentBalance <25){
+            active = false;
+        }
+        return active=true;
+    }
     
     
 }
