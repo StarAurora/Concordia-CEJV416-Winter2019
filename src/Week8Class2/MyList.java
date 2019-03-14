@@ -34,9 +34,32 @@ public class MyList {
         
         System.out.println("The max is: " + largest);
         
+        
+        
+        
+   
+        
+        
+        
+        
+        
+        
+        
     }
     
-
+    public static int shiftingArray(int[] inputArray){
+        
+        int firstMember = inputArray[0];
+        
+       
+        
+        for(int x=1;x<inputArray.length;x++){
+        inputArray[x-1]=inputArray[x];
+    }
+        inputArray.length-1 = firstMember;
+        
+        return input;
+    }
     
     
     public static int largestArrayValue(int[] inputArray){
@@ -50,11 +73,7 @@ public class MyList {
     }
     
 
-    
-//    public static shiftingArray()
-    
-    
-    
+ 
     
     
     
