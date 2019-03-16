@@ -59,7 +59,19 @@ public class MyList {
         inputArray.length-1 = firstMember;
         
         return input;
+        
+        
+        
+        
+      
     }
+    
+    
+    
+    
+    
+    
+    
     
     
     public static int largestArrayValue(int[] inputArray){
