@@ -11,9 +11,9 @@ public class AgeCalculator {
     public static void main(String[] args) {
         
         GregorianCalendar today = new GregorianCalendar();
-        int todaysYear = today.get(Calender.YEAR);
-        int todaysMonth = today.get(Calender.MONTH)-1;
-        int todaysDay = today.get(Calender.DAY);
+        int todaysYear = today.get(Calendar.YEAR);
+        int todaysMonth = today.get(Calendar.MONTH)-1;
+        int todaysDay = today.get(Calendar.DAY);
         
         Scanner sc =new Scanner(System.in);
         System.out.println("Please enter the month you were born");
